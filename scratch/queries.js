@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const { MONGODB_URI } = require('../config');
+// const mongoose = require('mongoose');
+// const { MONGODB_URI } = require('../config');
 
-const Note = require('../models/note');
+// const Note = require('../models/note');
 
 // mongoose
 //   .connect(
@@ -9,14 +9,14 @@ const Note = require('../models/note');
 //     { useNewUrlParser: true }
 //   )
 //   .then(() => {
-//     const searchTerm = 'lady gaga';
-//     let filter = {};
+//     const searchTerm = 'lorem';
 
-//     if (searchTerm) {
-//       filter.title = { $regex: searchTerm, $options: 'i' };
-//     }
-
-//     return Note.find(filter).sort({ updatedAt: 'desc' });
+//     return Note.find({
+//       $or: [
+//         { title: { $regex: searchTerm, $options: 'i' } },
+//         { content: { $regex: searchTerm, $options: 'i' } }
+//       ]
+//     });
 //   })
 //   .then(results => {
 //     console.log(results);
